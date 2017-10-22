@@ -1,0 +1,70 @@
+/*
+    example_blockchain
+    ---------------------------
+
+    JaCaMo Project File
+
+    This file defines the initial state of the MAS (initial agents, environment, organisation, ....)
+
+    (see jacamo/doc/jcm.html for more information about what can be defined in this file)
+
+    JaCaMo 0.6
+    Agosto 21, 2017 - 14:40:21
+*/
+
+mas example_blockchain {
+
+    agent sample_agent {
+        focus: blockchain.gui
+    }
+
+    workspace blockchain {
+        artifact gui: env.GUIConsole("common")
+    }
+    // agent source path
+    asl-path: src/agt
+              src/agt/inc
+}
+
+
+/*
+
+    JaCaMo Project File
+
+    This file defines the initial state of the MAS (initial agents, environment, organisation, ....)
+
+    --
+    Based on initially implementation developed by Rafael Bordini, Jomi Hubner and Maicon Zatelli,
+    and then adapted for courses by Joao Leite (http://centria.di.fct.unl.pt/~jleite/wesaac14/)
+
+*/
+/*
+mas gold_miners {
+    agent leader
+    agent miner1 : miner.asl  {
+        focus: mining.m1view
+    }
+    agent miner2 : miner.asl {
+        focus: mining.m2view
+    }
+    agent miner3 : miner.asl  {
+        focus: mining.m3view
+    }
+    agent miner4 : miner.asl  {
+        focus: mining.m4view
+    }
+
+    workspace mining {
+        // each agent has its own artifact to interface with the Mining Planet scenario
+        // first parameter is the id of the scenario
+        // second parameter is the id of the agent in the scenario
+        artifact m1view: mining.MiningPlanet(3,0)
+        artifact m2view: mining.MiningPlanet(3,1)
+        artifact m3view: mining.MiningPlanet(3,2)
+        artifact m4view: mining.MiningPlanet(3,3)
+    }
+
+    class-path: lib                      // java class path
+
+    asl-path:   src/agt, src/agt/inc     // agent source path
+}*/
